@@ -11,9 +11,11 @@ namespace ED_LeonardoToscano
         static void Main(string[] args)
         {
             double prec;
+            int tam, opc;
 
-            Console.WriteLine("vena de jugos");
+            Console.WriteLine("venta de jugos");
 
+            Console.WriteLine();
             Console.WriteLine("1. Naranja");
             Console.WriteLine("2. Fresa");
             Console.WriteLine("3. Lucuma");
@@ -21,15 +23,18 @@ namespace ED_LeonardoToscano
             Console.WriteLine("5. Surtido");
             Console.WriteLine("6. Piña");
 
+            Console.WriteLine();
             Console.Write("digitar el # segun el jugo a pedir: ");
-            int opc = int.Parse(Console.ReadLine());
+            opc = int.Parse(Console.ReadLine());
 
+            Console.WriteLine();
             Console.WriteLine("1. Large");
             Console.WriteLine("2. Medium");
             Console.WriteLine("3. Small");
 
+            Console.WriteLine();
             Console.Write("digitar el # segun el tamaño deseado: ");
-            int tam = int.Parse(Console.ReadLine());
+            tam = int.Parse(Console.ReadLine());
 
             switch (opc)
             {
@@ -70,10 +75,12 @@ namespace ED_LeonardoToscano
                     break;
             }
 
+            Console.WriteLine();
             Console.WriteLine("metodos de pago:");
             Console.WriteLine("1. Efectivo");
             Console.WriteLine("2. Targeta");
 
+            Console.WriteLine();
             Console.Write("digite el numero de metodo de pago: ");
             int pago = int.Parse(Console.ReadLine());
 

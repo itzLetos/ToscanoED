@@ -10,10 +10,10 @@ namespace ED_LeonardoToscano
     {
         static void Main(string[] args)
         {
-            double prec;
-            int tam, opc;
+            double prec, totalpaga;
+            int tam, opc, pago;
 
-            Console.WriteLine("venta de jugos");
+            Console.WriteLine("jugos en venta:");
 
             Console.WriteLine();
             Console.WriteLine("1. Naranja");
@@ -26,6 +26,9 @@ namespace ED_LeonardoToscano
             Console.WriteLine();
             Console.Write("digitar el # segun el jugo a pedir: ");
             opc = int.Parse(Console.ReadLine());
+
+            Console.WriteLine();
+            Console.WriteLine("tamaños disponibles:");
 
             Console.WriteLine();
             Console.WriteLine("1. Large");
@@ -77,20 +80,32 @@ namespace ED_LeonardoToscano
 
             Console.WriteLine();
             Console.WriteLine("metodos de pago:");
+
+            Console.WriteLine();
             Console.WriteLine("1. Efectivo");
             Console.WriteLine("2. Targeta");
 
             Console.WriteLine();
             Console.Write("digite el numero de metodo de pago: ");
-            int pago = int.Parse(Console.ReadLine());
+            pago = int.Parse(Console.ReadLine());
 
-            double totalpaga;
-
-            if (pago == 1) totalpaga = 0.92 * prec;
-            else totalpaga = 1.07 * prec;
+            if (pago == 1)
+            {
+                Console.WriteLine();
+                Console.Write("recibirá un descuento del 8% en la compra de su jugo");
+                Console.WriteLine();
+                totalpaga = 0.92 * prec;
+            }
+            else 
+            {
+                Console.WriteLine();
+                Console.Write("se le aplicará un recargo del 7% en la compra de su jugo");
+                Console.WriteLine();
+                totalpaga = 1.07 * prec; 
+            }
 
             Console.WriteLine();
-            Console.WriteLine("Ud. Pagará: " + totalpaga);
+            Console.WriteLine("El pago total es: " + totalpaga);
 
             Console.ReadKey();
         }
